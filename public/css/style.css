@@ -128,6 +128,10 @@ img {
   color: var(--light);
 }
 
+.form-input {
+  max-width: 50%;
+}
+
 .card header {
   color: var(--light);
   font-weight: bold;
