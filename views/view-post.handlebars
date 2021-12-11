@@ -1,0 +1,18 @@
+<div class = 'container'>
+<div class = 'blogDemo' >
+    <div class = 'demoTitle'>
+        <h2>{{blog.blogName}}</h2>
+        <p>Posted by {{blog.user.userName}} on {{format_date blog.updatedAt}}</p>
+    </div>
+    <p>
+        {{blog.content}}
+    </p>
+</div>
+{{#each blog.comments as |comment|}}
+<a href="/blog/comment/{{comment.id}}" class = 'commentCard'>
+    <p>{{comment.comment}}</p>
+    <p> - {{comment.user.userName}}, {{format_date comment.updatedAt}}</p>
+</a>
+{{/each}}
+<a class = "createBtn" href="/blog/{{blog.id}}/comment">+ Add Comment</a>
+</div>

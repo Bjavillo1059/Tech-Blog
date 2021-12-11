@@ -1,0 +1,13 @@
+<div class= "container">
+{{#each blogs as |blog|}}
+<div class = 'blogDemo' >
+    <div class = 'demoTitle'>
+        <a href="/blog/{{blog.id}}"><h2>{{blog.blogName}}</h2></a>
+        <p>Posted by {{blog.user.userName}} on {{format_date blog.createdAt}}</p>
+    </div>
+    <p>
+        {{blog.content}}
+    </p>
+</div>    
+{{/each}}
+</div>
